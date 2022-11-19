@@ -1,0 +1,5 @@
+.profile__user-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
