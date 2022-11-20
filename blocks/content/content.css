@@ -2,9 +2,3 @@
     max-width: 1280px;
     min-width: 320px;
 }
-
-@media screen and (min-width: 1024px) {
-    .content {
-        margin: 45px 200px 60px;
-    }
-}
