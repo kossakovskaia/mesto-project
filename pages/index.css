@@ -14,19 +14,12 @@
 @import url(../blocks/profile/profile.css);
 @import url(../blocks/profile/__about-user/profile__about-user.css);
 @import url(../blocks/profile/__avatar/profile__avatar.css);
-@import url(../blocks/profile/__user-wrapper/profile__user-wrapper.css);
-@import url(../blocks/profile/__edit-btn/profile__edit-btn.css);
 @import url(../blocks/profile/__info/profile__info.css);
 @import url(../blocks/profile/__user-name/profile__user-name.css);
-@import url(../blocks/profile/__add-btn/profile__add-btn.css);
 
 @import url(../blocks/cards/cards.css);
 @import url(../blocks/card/card.css);
 @import url(../blocks/card/__image/card__image.css);
-@import url(../blocks/card/__reaction-btn/card__reaction-btn.css);
-@import url(../blocks/card/__reaction/card__reaction.css);
-@import url(../blocks/card/__reaction/__reaction_default/card__reaction_default.css);
-@import url(../blocks/card/__reaction/__reaction_like/card__reaction_like.css);
 @import url(../blocks/card/__title/card__title.css);
 
 @import url(../blocks/footer/footer.css);
