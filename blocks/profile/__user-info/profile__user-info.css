@@ -1,0 +1,10 @@
+.profile__user-info {
+    margin-top: 26px;
+}
+
+@media screen and (min-width: 1024px) {
+    .profile__user-info {
+        margin-top: 0;
+        margin-left: 30px;
+    }
+}

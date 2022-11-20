@@ -2,7 +2,7 @@
     margin: 36px 19px 0;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
     .page__cards {
         margin: 50px 0 0;
     }
