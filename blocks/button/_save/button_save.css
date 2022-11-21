@@ -1,0 +1,18 @@
+.button_save {
+    background: #000;
+    border-radius: 2px;
+    border: 0;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    height: 46px;
+    line-height: 17px;
+    margin: 45px 22px 25px;
+    text-align: center;
+}
+
+@media screen and (min-width: 1280px) {
+    .button_save {
+        margin: 48px 36px 37px;
+    }
+}
