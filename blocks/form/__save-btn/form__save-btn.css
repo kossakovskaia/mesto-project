@@ -1,4 +1,4 @@
-.button_save {
+.form__save-btn {
     background: #000;
     border-radius: 2px;
     border: 0;
@@ -13,7 +13,7 @@
 }
 
 @media screen and (min-width: 1280px) {
-    .button_save {
+    .form__save-btn {
         margin: 48px 36px 37px;
         width: 358px;
     }
