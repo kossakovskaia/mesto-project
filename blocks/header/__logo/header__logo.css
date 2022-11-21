@@ -2,7 +2,7 @@
     display: block;
     height: 24px;
     margin-bottom: 31px;
-    margin-left: 37px;
+    margin-left: 27px;
     width: 103px;
 }
 
@@ -10,6 +10,7 @@
     .header__logo {
         height: 33px;
         margin-bottom: 41px;
+        margin-left: 0;
         width: 142px;
     }
 }

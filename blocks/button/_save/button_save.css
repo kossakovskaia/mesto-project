@@ -9,10 +9,12 @@
     line-height: 17px;
     margin: 45px 22px 25px;
     text-align: center;
+    width: 238px;
 }
 
 @media screen and (min-width: 1280px) {
     .button_save {
         margin: 48px 36px 37px;
+        width: 358px;
     }
 }
