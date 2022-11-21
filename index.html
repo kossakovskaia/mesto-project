@@ -20,54 +20,55 @@
             <div class="profile__user-info">
                 <div class="profile__user-wrapper">
                     <h1 class="profile__user-name">Жак-Ив Кусто</h1>
-                    <button type="button" class="button profile__edit-btn"></button>
+                    <button type="button" class="button profile__edit-btn" aria-label="Редактировать профиль"></button>
                 </div>
                 <p class="profile__about-user">Исследователь океана</p>
             </div>
 
-            <button type="button" class="button profile__add-btn"></button>
+            <button type="button" class="button profile__add-btn" aria-label="Добавить фотографию"></button>
         </section>
         <section class="cards page__cards" aria-label="Лента фотографий">
             <article class="card">
                 <img class="card__image" src="./images/karachaevsk.jpg" alt="Фотография, загруженная пользователем">
                 <div class="card__title-wrapper">
                     <h2 class="card__title">Карачаевск</h2>
-                    <button type="button" class="card__reaction-btn button"></button>
+                    <button type="button" class="card__reaction-btn button" aria-label="Оценить фотографию"></button>
                 </div>
             </article>
             <article class="card">
                 <img class="card__image" src="./images/elbrus.jpg" alt="Фотография, загруженная пользователем">
                 <div class="card__title-wrapper">
                     <h2 class="card__title">Гора Эльбрус</h2>
-                    <button type="button" class="card__reaction-btn button"></button>
+                    <button type="button" class="card__reaction-btn button" aria-label="Оценить фотографию"></button>
                 </div>
             </article>
             <article class="card">
                 <img class="card__image" src="./images/dombay.jpg" alt="Фотография, загруженная пользователем">
                 <div class="card__title-wrapper">
                     <h2 class="card__title">Домбай</h2>
-                    <button type="button" class="card__reaction-btn button"></button>
+                    <button type="button" class="card__reaction-btn button" aria-label="Оценить фотографию"></button>
                 </div>
             </article>
             <article class="card">
                 <img class="card__image" src="./images/elbrus.jpg" alt="Фотография, загруженная пользователем">
                 <div class="card__title-wrapper">
                     <h2 class="card__title">Гора Эльбрус</h2>
-                    <button type="button" class="card__reaction-btn button"></button>
+                    <button type="button" class="card__reaction-btn button" aria-label="Оценить фотографию"></button>
                 </div>
             </article>
             <article class="card">
                 <img class="card__image" src="./images/dombay.jpg" alt="Фотография, загруженная пользователем">
                 <div class="card__title-wrapper">
                     <h2 class="card__title">Домбай</h2>
-                    <button type="button" class="card__reaction-btn button"></button>
+                    <button type="button" class="card__reaction-btn button" aria-label="Оценить фотографию"></button>
                 </div>
             </article>
             <article class="card">
                 <img class="card__image" src="./images/karachaevsk.jpg" alt="Фотография, загруженная пользователем">
                 <div class="card__title-wrapper">
                     <h2 class="card__title">Карачаево-Черкесия</h2>
-                    <button type="button" class="card__reaction-btn button card__reaction-btn_active"></button>
+                    <button type="button" class="card__reaction-btn button card__reaction-btn_active"
+                        aria-label="Оценить фотографию"></button>
                 </div>
             </article>
         </section>
@@ -77,8 +78,8 @@
     </footer>
     <div class="popup">
         <div class="popup__container">
-            <button type="button" class="button popup__close-btn"></button>
-            <form class="form">
+            <button type="button" class="button popup__close-btn" aria-label="Закрыть форму"></button>
+            <form class="form" name="edit-user">
                 <h3 class="form__title">Редактировать профиль</h3>
                 <input class="form__input" type="text" placeholder="Введите имя пользователя" name="user-name">
                 <input class="form__input" type="text" placeholder="Расскажите о себе" name="about-user">

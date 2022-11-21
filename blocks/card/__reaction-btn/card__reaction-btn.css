@@ -4,3 +4,7 @@
     border: none;
     background: center no-repeat url(../../../images/reaction.svg);
 }
+
+.card__reaction-btn:hover {
+    opacity: .5;
+}

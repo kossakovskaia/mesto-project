@@ -4,6 +4,7 @@
     height: 50px;
     margin-top: 36px;
     width: 282px;
+    border-radius: 2px;
 }
 
 @media screen and (min-width: 1280px) {
@@ -11,4 +12,8 @@
         margin-top: 0;
         width: 150px;
     }
+}
+
+.profile__add-btn:hover {
+    opacity: .6;
 }
