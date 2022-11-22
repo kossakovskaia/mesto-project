@@ -8,7 +8,7 @@
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: 294px;
+    max-width: 240px;
 }
 
 @media screen and (min-width: 1280px) {
