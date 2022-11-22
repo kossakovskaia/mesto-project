@@ -17,5 +17,6 @@
         line-height: 48px;
         text-align: start;
         margin-left: 0;
+        max-width: 306px;
     }
 }
