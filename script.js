@@ -103,7 +103,6 @@ function openCard(cardImage, cardData) {
   const popupTitle = popup.querySelector(".image-popup__caption");
 
   cardImage.addEventListener("click", () => {
-    console.log(cardData);
     popup.classList.add("popup_opened");
     popupImage.src = cardData.link;
     popupTitle.textContent = cardData.name;
@@ -122,4 +121,56 @@ function deleteCardHandler(cardElement) {
   deleteCard.addEventListener("click", () => {
     cardElement.remove();
   });
+}
+
+function setCreateCardEventListener() {
+  const addPhotoPopup = document.querySelector(".popup__add-photo");
+  const form = addPhotoPopup.querySelector(".form");
+  const createCardBtn = addPhotoPopup.querySelector(".form__save-btn");
+
+  createCardBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const cardTitle = form.elements["photo-title"].value;
+    const imageSrc = form.elements["photo-url"].value;
+
+    addCard({ link: imageSrc, name: cardTitle });
+
+    addPhotoPopup.classList.remove("popup_opened");
+
+    cardTitle.value = "";
+    imageSrc.value = "";
+  });
+}
+
+setCreateCardEventListener();
+
+function setEditUserHandler() {
+  const editUserPopup = document.querySelector(".popup__edit-form");
+  const form = editUserPopup.querySelector(".form");
+  const saveUserDataBtn = editUserPopup.querySelector(".form__save-btn");
+
+  saveUserDataBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const userName = form.elements["user-name"].value;
+    const userInfo = form.elements["about-user"].value;
+
+    updateUserData(userName, userInfo);
+
+    editUserPopup.classList.remove("popup_opened");
+
+    userName.value = "";
+    userInfo.value = "";
+  });
+}
+
+setEditUserHandler();
+
+function updateUserData(name, info) {
+  const userName = document.querySelector(".profile__user-name");
+  const userInfo = document.querySelector(".profile__about-user");
+
+  userName.textContent = name;
+  userInfo.textContent = info;
 }
