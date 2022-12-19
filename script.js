@@ -81,11 +81,6 @@ function onLoad() {
     });
   }
 
-  elements.forEach((item) => {
-    setOpenPopupHandler(item.openBtn, item.popup);
-    setClosePopupHandler(item.closeBtn, item.popup);
-  });
-
   function setOpenCardHandler(cardImage, cardData) {
     const popup = document.querySelector(".image-popup");
     const popupImage = popup.querySelector(".image-popup__photo");
@@ -129,19 +124,17 @@ function onLoad() {
     cardsSection.append(cardElement);
   }
 
-  initialCards.forEach(renderCard);
-
   function setCreateCardHandler() {
     const addPhotoPopup = document.querySelector(".popup__add-photo");
     const form = addPhotoPopup.querySelector(".form");
     const createCardBtn = addPhotoPopup.querySelector(".form__save-btn");
 
+    const photoUrlInput = form.elements["photo-url"];
+    const photoTitleInput = form.elements["photo-title"];
+
     createCardBtn.addEventListener("click", (event) => {
       event.preventDefault();
       addPhotoPopup.classList.remove("popup_opened");
-
-      const photoUrlInput = form.elements["photo-url"];
-      const photoTitleInput = form.elements["photo-title"];
 
       renderCard({
         link: photoUrlInput.value,
@@ -153,8 +146,6 @@ function onLoad() {
     });
   }
 
-  setCreateCardHandler();
-
   function setEditUserHandler() {
     const editUserPopup = document.querySelector(".popup__edit-form");
     const form = editUserPopup.querySelector(".form");
@@ -163,20 +154,29 @@ function onLoad() {
     const userName = document.querySelector(".profile__user-name");
     const userInfo = document.querySelector(".profile__about-user");
 
+    const userNameInput = form.elements["user-name"];
+    const userInfoInput = form.elements["about-user"];
+
+    userNameInput.value = userName.textContent;
+    userInfoInput.value = userInfo.textContent;
+
     saveUserDataBtn.addEventListener("click", (event) => {
       event.preventDefault();
       editUserPopup.classList.remove("popup_opened");
 
-      const userNameInput = form.elements["user-name"];
-      const userInfoInput = form.elements["about-user"];
-
       userName.textContent = userNameInput.value;
       userInfo.textContent = userInfoInput.value;
-
-      userNameInput.value = "";
-      userInfoInput.value = "";
     });
   }
+
+  elements.forEach((item) => {
+    setOpenPopupHandler(item.openBtn, item.popup);
+    setClosePopupHandler(item.closeBtn, item.popup);
+  });
+
+  initialCards.forEach(renderCard);
+
+  setCreateCardHandler();
 
   setEditUserHandler();
 }
