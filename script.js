@@ -86,7 +86,7 @@ function onLoad() {
     setClosePopupHandler(item.closeBtn, item.popup);
   });
 
-  function openCard(cardImage, cardData) {
+  function setOpenCardHandler(cardImage, cardData) {
     const popup = document.querySelector(".image-popup");
     const popupImage = popup.querySelector(".image-popup__photo");
     const popupTitle = popup.querySelector(".image-popup__caption");
@@ -99,21 +99,21 @@ function onLoad() {
     });
   }
 
-  function toggleReaction(cardElement) {
+  function setToggleReactionHandler(cardElement) {
     const cardReaction = cardElement.querySelector(".card__reaction-btn");
     cardReaction.addEventListener("click", () => {
       cardReaction.classList.toggle("card__reaction-btn_active");
     });
   }
 
-  function deleteCardHandler(cardElement) {
+  function setDeleteCardHandler(cardElement) {
     const deleteCard = cardElement.querySelector(".card__trash-btn");
     deleteCard.addEventListener("click", () => {
       cardElement.remove();
     });
   }
 
-  function addCard(cardData) {
+  function renderCard(cardData) {
     const cardTemplate = document.querySelector("#card-template").content;
     const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
     const cardImage = cardElement.querySelector(".card__image");
@@ -122,16 +122,16 @@ function onLoad() {
     cardImage.src = cardData.link;
     cardElement.querySelector(".card__title").textContent = cardData.name;
 
-    openCard(cardImage, cardData);
-    toggleReaction(cardElement);
-    deleteCardHandler(cardElement);
+    setOpenCardHandler(cardImage, cardData);
+    setToggleReactionHandler(cardElement);
+    setDeleteCardHandler(cardElement);
 
     cardsSection.append(cardElement);
   }
 
-  initialCards.forEach(addCard);
+  initialCards.forEach(renderCard);
 
-  function setCreateCardEventListener() {
+  function setCreateCardHandler() {
     const addPhotoPopup = document.querySelector(".popup__add-photo");
     const form = addPhotoPopup.querySelector(".form");
     const createCardBtn = addPhotoPopup.querySelector(".form__save-btn");
@@ -143,7 +143,7 @@ function onLoad() {
       const photoUrlInput = form.elements["photo-url"];
       const photoTitleInput = form.elements["photo-title"];
 
-      addCard({
+      renderCard({
         link: photoUrlInput.value,
         name: photoTitleInput.value,
       });
@@ -153,7 +153,7 @@ function onLoad() {
     });
   }
 
-  setCreateCardEventListener();
+  setCreateCardHandler();
 
   function setEditUserHandler() {
     const editUserPopup = document.querySelector(".popup__edit-form");
