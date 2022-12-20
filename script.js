@@ -121,7 +121,7 @@ function onLoad() {
     setToggleReactionHandler(cardElement);
     setDeleteCardHandler(cardElement);
 
-    cardsSection.append(cardElement);
+    cardsSection.prepend(cardElement);
   }
 
   function setCreateCardHandler() {
